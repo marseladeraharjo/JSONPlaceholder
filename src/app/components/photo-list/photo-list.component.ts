@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Album } from 'src/app/interfaces/album';
 import { Photo } from 'src/app/interfaces/photo';
 import { AlbumService } from 'src/app/services/album.service';
@@ -17,6 +17,7 @@ export class PhotoListComponent implements OnInit {
   constructor(
     private photoService: PhotoService,
     private albumService: AlbumService,
+    private router: Router,
     private activatedRoute: ActivatedRoute
   ) {
     this.activatedRoute.params.subscribe((params) => {
@@ -31,6 +32,10 @@ export class PhotoListComponent implements OnInit {
         this.album = res;
       });
     });
+  }
+
+  getPhotoDetail(id: number) {
+    this.router.navigate(['photo/detail', id]);
   }
 
   ngOnInit(): void {}

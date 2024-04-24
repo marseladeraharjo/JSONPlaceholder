@@ -11,8 +11,15 @@ export class PhotoService {
 
   constructor(private http: HttpClient) {}
 
+  // return list of photo by album id
   getPhotosByAlbumId(id: number): Observable<Photo[]> {
     const url = `${this.baseUrl}/albums/${id}/photos`;
     return this.http.get<Photo[]>(url);
+  }
+
+  // return photo by id
+  getPhotoDetail(id: number): Observable<Photo> {
+    const url = `${this.baseUrl}/photos/${id}`;
+    return this.http.get<Photo>(url);
   }
 }

@@ -17,7 +17,13 @@
               <div class="card-body">
                 <h6 class="card-title">{{ photo.title }}</h6>
                 <div class="text-center">
-                  <a href="#" class="btn btn-outline-primary">Detail</a>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary"
+                    (click)="getPhotoDetail(photo.id)"
+                  >
+                    Detail
+                  </button>
                 </div>
               </div>
             </div>

@@ -5,6 +5,7 @@ import { PostListComponent } from './components/post-list/post-list.component';
 import { AlbumListComponent } from './components/album-list/album-list.component';
 import { PostDetailComponent } from './components/post-detail/post-detail.component';
 import { PhotoListComponent } from './components/photo-list/photo-list.component';
+import { PhotoDetailComponent } from './components/photo-detail/photo-detail.component';
 
 const routes: Routes = [
   { path: '', component: UserListComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'user/:id/albums', component: AlbumListComponent },
   { path: 'post/:id/detail', component: PostDetailComponent },
   { path: 'album/:id/photos', component: PhotoListComponent },
+  { path: 'photo/detail/:id', component: PhotoDetailComponent },
   { path: '**', component: UserListComponent },
 ];
 

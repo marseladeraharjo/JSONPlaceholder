@@ -11,9 +11,10 @@ import { AlbumListComponent } from './components/album-list/album-list.component
 import { PostDetailComponent } from './components/post-detail/post-detail.component';
 import { CommentListComponent } from './components/comment-list/comment-list.component';
 import { PhotoListComponent } from './components/photo-list/photo-list.component';
+import { PhotoDetailComponent } from './components/photo-detail/photo-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, UserListComponent, PostListComponent, AlbumListComponent, PostDetailComponent, CommentListComponent, PhotoListComponent],
+  declarations: [AppComponent, NavbarComponent, UserListComponent, PostListComponent, AlbumListComponent, PostDetailComponent, CommentListComponent, PhotoListComponent, PhotoDetailComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

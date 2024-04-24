@@ -16,4 +16,9 @@ export class PostService {
     const url = `${this.baseUrl}/users/${id}/posts`;
     return this.http.get<Post[]>(url);
   }
+
+  getPostDetail(id: number): Observable<Post> {
+    const url = `${this.baseUrl}/posts/${id}`;
+    return this.http.get<Post>(url);
+  }
 }

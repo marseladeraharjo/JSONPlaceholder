@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Post } from 'src/app/interfaces/post';
 import { User } from 'src/app/interfaces/user';
 import { PostService } from 'src/app/services/post.service';
@@ -17,7 +17,8 @@ export class PostListComponent implements OnInit {
   constructor(
     private postService: PostService,
     private userService: UserService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private router: Router
   ) {
     this.activatedRoute.params.subscribe((params) => {
       this.postService
@@ -31,6 +32,10 @@ export class PostListComponent implements OnInit {
         this.user = res;
       });
     });
+  }
+
+  getPostDetail(id: number) {
+    this.router.navigate(['post/detail', id]);
   }
 
   ngOnInit(): void {}

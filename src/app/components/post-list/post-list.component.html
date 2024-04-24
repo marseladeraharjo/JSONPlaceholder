@@ -15,7 +15,11 @@
             <td>{{ i + 1 }}</td>
             <td>{{ post.title }}</td>
             <td>
-              <button type="button" class="btn btn-outline-secondary">
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                (click)="getPostDetail(post.id)"
+              >
                 Detail
               </button>
             </td>

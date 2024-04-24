@@ -35,7 +35,7 @@ export class PostListComponent implements OnInit {
   }
 
   getPostDetail(id: number) {
-    this.router.navigate(['post/detail', id]);
+    this.router.navigate(['post/', id, 'detail']);
   }
 
   ngOnInit(): void {}

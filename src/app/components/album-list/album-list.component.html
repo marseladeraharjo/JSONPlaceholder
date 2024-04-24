@@ -15,7 +15,11 @@
             <td>{{ i + 1 }}</td>
             <td>{{ album.title }}</td>
             <td>
-              <button type="button" class="btn btn-outline-primary">
+              <button
+                type="button"
+                class="btn btn-outline-primary"
+                (click)="getPhotosByAlbumId(album.id)"
+              >
                 See Photos
               </button>
             </td>

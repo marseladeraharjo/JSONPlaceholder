@@ -1,0 +1,29 @@
+<div class="container" style="margin-top: 1rem">
+  <div class="card">
+    <div class="card-body text-center" *ngIf="album">
+      <h3 class="card-title">{{ album.title }} Album</h3>
+    </div>
+    <div class="container mt-2">
+      <h4>Photos</h4>
+      <div class="container mb-2">
+        <div class="row row-cols-5 g-2">
+          <div class="col" *ngFor="let photo of photos">
+            <div class="card" style="height: 400px">
+              <img
+                src="{{ photo.thumbnailUrl }}"
+                class="card-img-top"
+                alt="{{ photo.title }}"
+              />
+              <div class="card-body">
+                <h6 class="card-title">{{ photo.title }}</h6>
+                <div class="text-center">
+                  <a href="#" class="btn btn-outline-primary">Detail</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

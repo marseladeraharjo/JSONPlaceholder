@@ -16,4 +16,9 @@ export class AlbumService {
     const url = `${this.baseUrl}/users/${id}/albums`;
     return this.http.get<Album[]>(url);
   }
+
+  getAlbum(id: number): Observable<Album> {
+    const url = `${this.baseUrl}/albums/${id}`;
+    return this.http.get<Album>(url);
+  }
 }

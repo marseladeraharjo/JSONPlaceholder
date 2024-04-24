@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Album } from 'src/app/interfaces/album';
 import { User } from 'src/app/interfaces/user';
 import { AlbumService } from 'src/app/services/album.service';
@@ -17,7 +17,8 @@ export class AlbumListComponent implements OnInit {
   constructor(
     private albumService: AlbumService,
     private userService: UserService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private router: Router
   ) {
     this.activatedRoute.params.subscribe((params) => {
       this.albumService
@@ -31,6 +32,10 @@ export class AlbumListComponent implements OnInit {
         this.user = res;
       });
     });
+  }
+
+  getPhotosByAlbumId(id: number) {
+    this.router.navigate(['album/', id, 'photos']);
   }
 
   ngOnInit(): void {}

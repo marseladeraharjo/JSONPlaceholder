@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title" *ngIf="user">{{ user.name }} Albums</h4>
+      <table class="table table-hover">
+        <thead>
+          <tr class="table-secondary">
+            <th>No</th>
+            <th>Title</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let album of albums; let i = index">
+          <tr>
+            <td>{{ i + 1 }}</td>
+            <td>{{ album.title }}</td>
+            <td>
+              <button type="button" class="btn btn-outline-primary">
+                See Photos
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

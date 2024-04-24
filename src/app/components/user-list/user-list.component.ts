@@ -24,6 +24,10 @@ export class UserListComponent implements OnInit {
     this.router.navigate(['user/', id, 'posts']);
   }
 
+  getUserAlbums(id: number) {
+    this.router.navigate(['user/', id, 'albums']);
+  }
+
   ngOnInit(): void {
     this.getUserList();
   }

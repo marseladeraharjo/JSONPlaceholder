@@ -7,9 +7,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostListComponent } from './components/post-list/post-list.component';
+import { AlbumListComponent } from './components/album-list/album-list.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, UserListComponent, PostListComponent],
+  declarations: [AppComponent, NavbarComponent, UserListComponent, PostListComponent, AlbumListComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

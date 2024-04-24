@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { PostListComponent } from './components/post-list/post-list.component';
+import { AlbumListComponent } from './components/album-list/album-list.component';
 
 const routes: Routes = [
   { path: '', component: UserListComponent },
   { path: 'user', component: UserListComponent },
   { path: 'user/:id/posts', component: PostListComponent },
+  { path: 'user/:id/albums', component: AlbumListComponent },
   { path: '**', component: UserListComponent },
 ];
 

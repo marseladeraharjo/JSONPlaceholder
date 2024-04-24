@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/interfaces/user';
 import { UserService } from 'src/app/services/user.service';
 
@@ -10,13 +11,17 @@ import { UserService } from 'src/app/services/user.service';
 export class UserListComponent implements OnInit {
   users: User[] = [];
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private router: Router) {}
 
   // use user service to get list of user
   getUserList(): void {
     this.userService.getUserList().subscribe((users) => {
       this.users = users;
     });
+  }
+
+  getUserPosts(id: number) {
+    this.router.navigate(['user/', id, 'posts']);
   }
 
   ngOnInit(): void {

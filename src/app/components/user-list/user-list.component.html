@@ -19,14 +19,18 @@
             <td>{{ user.username }}</td>
             <td>{{ user.email }}</td>
             <td>
-              <button type="button" name="btn-success" class="btn btn-link">
-                <p>Detail</p>
+              <button type="button" class="btn btn-outline-secondary">
+                Detail
               </button>
-              <button type="button" name="btn-success" class="btn btn-link">
-                <p>Post</p>
+              <button
+                type="button"
+                class="btn btn-outline-primary ms-2"
+                (click)="getUserPosts(user.id)"
+              >
+                Post
               </button>
-              <button type="button" name="btn-success" class="btn btn-link">
-                <p>Album</p>
+              <button type="button" class="btn btn-outline-success ms-2">
+                Album
               </button>
             </td>
           </tr>

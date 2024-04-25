@@ -4,8 +4,8 @@ This project was a technical assessment for AXA - Frontend Engineer, generated w
 
 ## Built With
 
-- [![Angular][Angular.io]][Angular-url]
-- [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![Angular][Angular.io]][Angular-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

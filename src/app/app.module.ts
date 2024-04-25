@@ -14,6 +14,7 @@ import { PhotoListComponent } from './components/photo-list/photo-list.component
 import { PhotoDetailComponent } from './components/photo-detail/photo-detail.component';
 import { PostModalComponent } from './components/post-modal/post-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CommentModalComponent } from './components/comment-modal/comment-modal.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     PhotoListComponent,
     PhotoDetailComponent,
     PostModalComponent,
+    CommentModalComponent,
   ],
   imports: [
     BrowserModule,

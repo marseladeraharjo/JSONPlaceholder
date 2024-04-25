@@ -1,9 +1,15 @@
 <!-- Modal -->
-<div class="modal fade" id="post-modal" aria-hidden="true">
+<div
+  class="modal fade"
+  id="comment-modal"
+  tabindex="-1"
+  aria-labelledby="post-modal"
+  aria-hidden="true"
+>
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title fs-5" id="exampleModalLabel">Add Post</h4>
+        <h4 class="modal-title fs-5" id="exampleModalLabel">Add Comment</h4>
         <button
           type="button"
           class="btn-close"
@@ -14,22 +20,45 @@
       <div class="modal-body">
         <form [formGroup]="form">
           <div class="col-12 col-md-12 col-sm-12">
-            <input type="hidden" name="userId" formControlName="userId" />
+            <input type="hidden" name="postId" formControlName="postId" />
             <div class="form-group">
-              <label for="title">Title</label>
+              <label for="name">Name</label>
               <input
                 type="text"
                 class="form-control"
-                id="title"
-                title="title"
-                formControlName="title"
-                placeholder="Enter Title"
+                id="name"
+                name="name"
+                formControlName="name"
+                placeholder="Enter Name"
               />
-              <div *ngIf="form.get('title')?.errors !== null">
+              <div *ngIf="form.get('name')?.errors !== null">
                 <small
-                  *ngIf="form.get('title')?.errors?.['required']"
+                  *ngIf="form.get('name')?.errors?.['required']"
                   class="form-text text-danger"
-                  >Title is required</small
+                  >Name is required</small
+                >
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                formControlName="email"
+                placeholder="Enter Email"
+              />
+              <div *ngIf="form.get('email')?.errors !== null">
+                <small
+                  *ngIf="form.get('email')?.errors?.['required']"
+                  class="form-text text-danger"
+                  >Email is required</small
+                >
+                <small
+                  *ngIf="form.get('email')?.errors?.['email']"
+                  class="form-text text-danger"
+                  >Email is not valid</small
                 >
               </div>
             </div>

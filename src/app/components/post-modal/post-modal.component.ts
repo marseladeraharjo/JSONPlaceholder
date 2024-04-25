@@ -40,7 +40,7 @@ export class PostModalComponent implements OnChanges {
     });
   }
 
-  private EditForm(): void {
+  private editForm(): void {
     this.form.patchValue({
       userId: this.post.userId,
       title: this.post.title,
@@ -88,7 +88,7 @@ export class PostModalComponent implements OnChanges {
       this.initialForm();
     }
     if (this.actionStatus === Action.UPDATE) {
-      this.EditForm();
+      this.editForm();
     }
   }
 }

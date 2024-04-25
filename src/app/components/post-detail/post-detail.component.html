@@ -7,7 +7,18 @@
       </p>
     </div>
     <div class="container mt-2">
-      <h4>Comments</h4>
+      <div class="container d-flex gap-2 mb-1">
+        <h4>Comments</h4>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#comment-modal"
+          (click)="openModal()"
+        >
+          Add
+        </button>
+      </div>
       <div class="card mb-2" *ngFor="let comment of comments">
         <div class="card-body">
           <h5 class="card-title">
@@ -17,8 +28,32 @@
           <p class="card-text">
             {{ comment.body }}
           </p>
+          <button
+            type="button"
+            class="btn btn-primary"
+            title="Edit"
+            data-bs-toggle="modal"
+            data-bs-target="#comment-modal"
+            (click)="editComment(comment)"
+          >
+            Edit
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger ms-1"
+            title="Delete"
+            (click)="deleteComment(comment.id)"
+          >
+            Delete
+          </button>
         </div>
       </div>
     </div>
   </div>
 </div>
+<app-comment-modal
+  [actionStatus]="actionStatus"
+  (addComment)="addComment($event)"
+  (editComment)="updateComment($event)"
+  [comment]="comment"
+></app-comment-modal>

@@ -12,10 +12,28 @@ import { PostDetailComponent } from './components/post-detail/post-detail.compon
 import { CommentListComponent } from './components/comment-list/comment-list.component';
 import { PhotoListComponent } from './components/photo-list/photo-list.component';
 import { PhotoDetailComponent } from './components/photo-detail/photo-detail.component';
+import { PostModalComponent } from './components/post-modal/post-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, UserListComponent, PostListComponent, AlbumListComponent, PostDetailComponent, CommentListComponent, PhotoListComponent, PhotoDetailComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    UserListComponent,
+    PostListComponent,
+    AlbumListComponent,
+    PostDetailComponent,
+    CommentListComponent,
+    PhotoListComponent,
+    PhotoDetailComponent,
+    PostModalComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
